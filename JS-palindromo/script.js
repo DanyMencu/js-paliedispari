@@ -4,6 +4,15 @@ const resoult = document.querySelector('.resoult');
 const userWord = prompt('Inserisci una parola che credi sia palindroma').trim().toLowerCase();
 
 const reversWord = reverseChars(userWord);
+//Check se è PALINDROMA
+if (reversWord !== userWord) {
+    //Output del risultato se è o non è palindroma la parola inserita
+    resoult.innerHTML = (`La parola inserita NON è palindroma, ${userWord} al contrario è ${reversWord}.`);
+} else {
+    //Output del risultato se è o non è palindroma la parola inserita
+    resoult.innerHTML = (`La parola inserita è palindroma, ${userWord} al contrario è ${reversWord}.`);
+}
+
 //Function per riscrivere la parola al contrario
 function reverseChars(word) {
     let reverse = '';
@@ -13,12 +22,4 @@ function reverseChars(word) {
     }
 
     return reverse;
-}
-//Check se è PALINDROMA
-if (reversWord !== userWord) {
-    //Output del risultato se è o non è palindroma la parola inserita
-    resoult.innerHTML = (`La parola inserita NON è palindroma, ${userWord} al contrario è ${reversWord}.`);
-} else {
-    //Output del risultato se è o non è palindroma la parola inserita
-    resoult.innerHTML = (`La parola inserita è palindroma, ${userWord} al contrario è ${reversWord}.`);
 }
