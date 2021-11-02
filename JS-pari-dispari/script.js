@@ -10,11 +10,11 @@ while (userChoice !== 'pari' && userChoice !== 'dispari') {
 }
 
 // Richiesta scelta tra 1 e 5
-let userNumber = prompt('Scegli un numero da 1 a 5?');
+let userNumber = parseInt( prompt('Scegli un numero da 1 a 5?') );
 
 // Check dell'inserimento corretto del numero scelto dall'utente
 while ( isNaN(userNumber) || userNumber < 1 || userNumber > 5 ) {
-    userNumber = prompt('Scegli un numero da 1 a 5?');
+    userNumber = parseInt( prompt('Scegli un numero da 1 a 5?') );
 }
 
 // Fornire al computer un numero random sempre tra 1 e 5
@@ -33,17 +33,13 @@ else {
 
 //Funzioni
 function randomNumber (min, max) {
-    let randomNumber = Math.floor(Math.random() * max) + min;
-    return randomNumber;
+    return randomNumber = Math.floor(Math.random() * max - min +1) + min;
 }
 
 function oddEven (num1 , num2) {
     if ( (num1 + num2) % 2 === 0) {
-        finding = 'pari';
-    }
-    else {
-        finding = 'dispari';
+        return = 'pari';
     }
 
-    return finding;
+    return 'dispari';
 }

@@ -20,6 +20,8 @@ function reverseChars(word) {
     for (let i = (word.length - 1); i >= 0; i--) {
         reverse += word[i];
     }
+ //Variente con funzionio
+ // const reverse = word.split('').reverse().join('');
 
     return reverse;
 }
